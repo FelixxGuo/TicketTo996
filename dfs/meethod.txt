@@ -1,0 +1,34 @@
+Depth-First Search (DFS)
+	Definition: A traversal/search strategy that explores a graph or tree by going as deep as possible
+        along each branch before backtracking.
+	Core Idea:
+		Start at a node.
+		Explore one branch completely before moving to the next.
+		Backtrack when you reach a node with no unvisited neighbors.
+	Characteristics:
+	Explores paths deeply first.
+	Does not necessarily include condition checking or undoing actions (pure traversal).
+	Can be implemented recursively or with a stack.
+
+DFS Pseudo Code
+    function DFS(node):
+        if node is goal:
+            return
+        mark node as visited
+        for each neighbor of node:
+            if neighbor is not visited:
+                DFS(neighbor)
+    
+    function DFS_Iterative(start_node):
+        create an empty stack
+        push start_node onto stack
+        mark start_node as visited
+
+        while stack is not empty:
+            node = pop from stack
+            process(node)  // e.g., print or store the node
+
+            for each neighbor of node:
+                if neighbor is not visited:
+                    push neighbor onto stack
+                    mark neighbor as visited

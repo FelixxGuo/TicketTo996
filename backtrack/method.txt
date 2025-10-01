@@ -1,0 +1,17 @@
+Backtracking Algorithm
+	Definition: A search strategy that uses try + undo to solve problems
+        such as combinations, permutations, subsets, and paths.
+	Core Idea:
+		Make a decision (e.g., choose which step to take or which number to select).
+		Recursively proceed to the next step.
+		If the current path is invalid or the search is complete, undo the choice (backtrack).
+	Characteristics: DFS + conditional checks + undoing actions
+ Code   
+    function backtrack(path):
+        if path meets goal:
+            save solution
+            return
+        for option in choices:
+            make choice
+            backtrack(path)
+            undo choice
