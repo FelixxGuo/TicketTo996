@@ -56,7 +56,7 @@
  * right(right) {}
  * };
  */
-class Solution {
+class Solution1 {
 public:
   int maxDepth(TreeNode *root) {
     if (!root) {
@@ -81,6 +81,18 @@ public:
       ++res;
     }
     return res;
+  }
+};
+
+class Solution {
+public:
+  int maxDepth(TreeNode *root) {
+    if (!root) {
+      return 0;
+    }
+    int leftDepth = maxDepth(root->left);
+    int rightDepth = maxDepth(root->right);
+    return max(leftDepth, rightDepth) + 1;
   }
 };
 // @lc code=end
