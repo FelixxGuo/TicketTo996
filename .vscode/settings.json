@@ -33,6 +33,11 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "deque": "cpp",
+        "__hash_table": "cpp",
+        "bitset": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp"
     }
 }
