@@ -58,7 +58,7 @@
  */
 
 // @lc code=start
-class Solution {
+class Solution1 {
 public:
   vector<vector<int>> combinationSum2(vector<int> &candidates, int target) {
     vector<vector<int>> res;
@@ -96,6 +96,44 @@ private:
       used[i] = false;
       path.pop_back();
       sum -= candidates[i];
+    }
+  }
+};
+
+class Solution {
+public:
+  vector<vector<int>> combinationSum2(vector<int> &candidates, int target) {
+    vector<vector<int>> res;
+    vector<int> path;
+    sort(candidates.begin(), candidates.end());
+    int sum = 0;
+    int start = 0;
+    backtrack(candidates, path, res, target, sum, start);
+    return res;
+  }
+
+private:
+  void backtrack(const vector<int> &candidates, vector<int> &path,
+                 vector<vector<int>> &res, int target, int sum, int start) {
+    if (sum > target) {
+      return;
+    }
+    if (sum == target) {
+      res.push_back(path);
+      return;
+    }
+    for (int i = start; i < candidates.size(); ++i) {
+      if (sum + candidates[i] > target) {
+        break;
+      }
+      if (i > start && candidates[i] == candidates[i - 1]) {
+        continue;
+      }
+      path.push_back(candidates[i]);
+      sum += candidates[i];
+      backtrack(candidates, path, res, target, sum, i + 1);
+      sum -= candidates[i];
+      path.pop_back();
     }
   }
 };
