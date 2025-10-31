@@ -15,3 +15,21 @@ Backtracking Algorithm
             make choice
             backtrack(path)
             undo choice
+
+
+The order to practice:
+https://leetcode.com/problems/combinations/description/
+https://leetcode.com/problems/combination-sum/description/
+https://leetcode.com/problems/combination-sum-ii/description/
+https://leetcode.com/problems/combination-sum-iii/description/
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+https://leetcode.com/problems/palindrome-partitioning/description/
+https://leetcode.com/problems/restore-ip-addresses/description/
+https://leetcode.com/problems/subsets/description/
+https://leetcode.com/problems/subsets-ii/description/
+https://leetcode.com/problems/non-decreasing-subsequences/description/
+https://leetcode.com/problems/permutations/description/
+https://leetcode.com/problems/permutations-ii/description/
+https://leetcode.com/problems/reconstruct-itinerary/description/
+https://leetcode.com/problems/n-queens/description/
+https://leetcode.com/problems/sudoku-solver/description/
